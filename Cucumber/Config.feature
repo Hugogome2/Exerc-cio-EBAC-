@@ -19,8 +19,7 @@
             e escolher a quantidade
             Para depois inserir no carrinho
 
-            Contexto:
-            Dado que o cliente acesse a página do produto camiseta
+            Contexto: Dado que o cliente acesse a página do produto camiseta
 
             Cenário: Adicionar produto ao carrinho
             Quando o cliente escolher o tamanho "M", cor "Blue" e "4" quantidade

@@ -14,10 +14,7 @@ Funcionalidade: Login na Plataforma
 Cenário: Visualizar Pedidos
 Dado que o cliente acesse a plataforma de autenticação da EBAC
 Quando o cliente inserir credenciais válidas
-Então deve ser direcionado para a área de pedidos.
-#Então deve ser direcionado para a área de checkout.
-
-#No exercicio pede para coloar para a área de checkout mas na historia fala sobre visualizar seu pedidos então coloquei área de pedidos mas também fiz o Então com checkou!!!
+Então deve ser direcionado para a área de checkout.
 
 Cenário: Credenciais Inválidas
 Dado que o cliente acesse a plataforma de autenticação da EBAC
