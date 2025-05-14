@@ -36,14 +36,17 @@
             Quando o cliente insire o e-mail com formato inválido
             Então o sistema de exibir uma mensagem de erro "E-mail com formato enválido"
 
-            Cenário: Cadastros com campos vazios
-            Dado que o cliente esteja na tela de cadastro com os seguintes dados
+            Esquema do Cenário: Cadastros com campos vazios
+            Dado que o cliente esteja na tela de cadastro
+            Quando o cliente tentar realizar o cadastro com um dos campos <nome>,<sobrenome>,<pais>,<endereço>,<cidade>,<cep>,<telefone> e <endereço-de-e-mail> vazios
+            Então o sistema deve exibir mensagem de alerta "Por favor, preencha todos os campos obrigatórios"
+
+            Exemplos:
+
             | nome   | sobrenome | pais   | endereço            | cidade    | cep       | telefone        | endereço-de-e-mail    |
             | Thiago | Da silva  | Narnia | rua: Jose das neves |           | 098094234 | (00)99911234454 | Thiago@jubiter.com.br |
             | Fred   |           | Narnia | rua: Jose das neves | Borboleta | 098734234 | (00)99910045464 | Fred@jubiter.com.br   |
             | Cacio  | Da silva  | Narnia | rua: Jose das neves | Cobra     |           | (00)99987623454 | Cacio@jubiter.com.br  |
-            Quando o cliente tentar realizar o cadastro com campos vazios
-            Então o sistema deve exibir mensagem de alerta "Por favor, preencha todos os campos obrigatórios"
 
             |---
 
