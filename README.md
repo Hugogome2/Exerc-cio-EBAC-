@@ -96,7 +96,3 @@
 - 🛡️ Testes de Segurança
 
 ---
-
-> Trilha de aprendizado da EBAC
-
-## Feito por ** <img src=" ./imgs/img.png" width=100 height=26 > **
