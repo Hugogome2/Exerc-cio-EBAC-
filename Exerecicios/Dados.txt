@@ -1,0 +1,9 @@
+Dados do aluno
+
+-Primeiro Nome: Hugo Gomes
+-Profissão: Operador Tecnico 
+-Cidade: Montes Claros
+-O que faz nas horas vaga: Jogo Basquete 
+-Feedback sobre o curso Qualidade de Software: Ate o momento esta sendo bom mas acho que falta mais desafios com base no mercado, e as atividades estao desatualizadas, tipo 2 anos atras. 
+Poderia fazer uma atualizacao 
+-Feedback sobre a plataforma de estudo da EBAC: Plataforma boa.
