@@ -1,3 +1,6 @@
+
+/// <reference types="cypress" />
+
 import { faker } from "@faker-js/faker"
 describe('Feature: cadastro', () => {
     //Foi utilizado uma função no arquivo cypress.config.js = baseUrl para nao precisar repetir a URL do site que esta sendo usado para teste, usar somete o caminho a ser testo.

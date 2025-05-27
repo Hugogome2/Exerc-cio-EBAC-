@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe("Feature login", () => {
     //Foi utilizado uma função no arquivo cypress.config.js = baseUrl para nao precisar repetir a URL do site que esta sendo usado para teste, usar somete o caminho a ser testo.
     beforeEach(() => {
