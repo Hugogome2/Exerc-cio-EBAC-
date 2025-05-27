@@ -1,8 +1,7 @@
-///import cypress from "cypress"
-
 describe("Feature login", () => {
+    //Foi utilizado uma função no arquivo cypress.config.js = baseUrl para nao precisar repetir a URL do site que esta sendo usado para teste, usar somete o caminho a ser testo.
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/');
+        cy.visit('/minha-conta/');
     });
 
     it('must login successfully', () => {
@@ -24,5 +23,6 @@ describe("Feature login", () => {
         cy.get('.woocommerce-form > .button').click()
         cy.get('.woocommerce-error').should('exist')
     });
+
 })
 

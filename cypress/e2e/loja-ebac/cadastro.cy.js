@@ -1,12 +1,9 @@
-///import { cypress } from 'cypress';
 import { faker } from "@faker-js/faker"
-
 describe('Feature: cadastro', () => {
-
+    //Foi utilizado uma função no arquivo cypress.config.js = baseUrl para nao precisar repetir a URL do site que esta sendo usado para teste, usar somete o caminho a ser testo.
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/');
+        cy.visit('/minha-conta/');
     });
-
     it('must complete cadastre with success', () => {
         cy.get('#reg_email').type(faker.internet.email());
         cy.get('#reg_password').type(faker.internet.password());
@@ -17,8 +14,5 @@ describe('Feature: cadastro', () => {
         cy.get('.woocommerce-Button').click()
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
     });
-
-
-
 
 });
