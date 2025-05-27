@@ -1,0 +1,23 @@
+{
+  "name": "exercicio-ebac-",
+  "version": "1.0.0",
+  "description": "### 📘 Jornada de Aprendizagem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hugogome2/Exerc-cio-EBAC-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hugogome2/Exerc-cio-EBAC-/issues"
+  },
+  "homepage": "https://github.com/Hugogome2/Exerc-cio-EBAC-#readme",
+  "dependencies": {
+    "cypress": "^14.4.0"
+  }
+}
