@@ -5,7 +5,7 @@ describe("Feature login", () => {
         cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/');
     });
 
-    it('most login successfully', () => {
+    it('must login successfully', () => {
         cy.get('#username').type('Teste400@teste.com.br');
         cy.get('#password').type('Senha12345*');
         cy.get('.woocommerce-form > .button').click()
