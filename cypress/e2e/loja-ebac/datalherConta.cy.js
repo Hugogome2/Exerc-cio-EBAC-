@@ -1,6 +1,6 @@
 ///<reference types="cypress"/>
 
-import { faker, fakerAF_ZA } from "@faker-js/faker";
+import { faker } from "@faker-js/faker";
 
 describe('Feature: Completar dados da conta', () => {
 
