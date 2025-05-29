@@ -1,7 +1,7 @@
 ///<reference types="cypress"/>
 
 import { faker } from "@faker-js/faker";
-
+//Teste realizado usando comando personalizado.
 describe('Feature: Completar dados da conta', () => {
 
     beforeEach(() => {

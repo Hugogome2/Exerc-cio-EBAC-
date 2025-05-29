@@ -3,9 +3,9 @@
 
 import { faker } from "@faker-js/faker"
 describe('Feature: cadastro', () => {
-    //Foi utilizado uma função no arquivo cypress.config.js = baseUrl para nao precisar repetir a URL do site que esta sendo usado para teste, usar somete o caminho a ser testo.
+    //Foi utilizado uma função no arquivo cypress.config.js = baseUrl para nao precisar repetir a URL do site que esta sendo usado para teste, usar somete o caminho a ser testado.
     beforeEach(() => {
-        cy.visit('/minha-conta/');
+        cy.visit('minha-conta');
     });
     it('must complete cadastre with success', () => {
         cy.get('#reg_email').type(faker.internet.email());
@@ -18,7 +18,7 @@ describe('Feature: cadastro', () => {
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
     });
 
-
+    //cy.preCadastro = Comando personalizado na pasta support para evitar repetição de code 
     it.only('must complete cadastre with success with custom command', () => {
         cy.preCadastro(faker.internet.email(), faker.internet.password(), faker.person.firstName(), faker.person.lastName())
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')

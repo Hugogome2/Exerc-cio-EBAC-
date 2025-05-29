@@ -1,11 +1,8 @@
-import { faker } from "@faker-js/faker";
-
 Cypress.Commands.add('Login', (usuário, senha) => {
     cy.get('#username').type(usuário);
     cy.get('#password').type(senha, { log: false });//log:false => para nao aparecer dos sensíveis no debug 
     cy.get('.woocommerce-form > .button').click()
 });
-
 Cypress.Commands.add('preCadastro', (email, senha, nome, sobrenome) => {
     cy.get('#reg_email').type(email);
     cy.get('#reg_password').type(senha);
@@ -15,7 +12,6 @@ Cypress.Commands.add('preCadastro', (email, senha, nome, sobrenome) => {
     cy.get('#account_last_name').type(sobrenome)
     cy.get('.woocommerce-Button').click()
 });
-
 Cypress.Commands.add('detalhesConta', (nome, sobrenome, nickname) => {
     cy.get('#account_first_name').type(nome)
     cy.get('#account_last_name').type(sobrenome)

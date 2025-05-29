@@ -3,7 +3,7 @@ import dadosPerfil from "../..//fixtures/dadosPerfil.json";
 describe("Feature login", () => {
     //Foi utilizado uma função no arquivo cypress.config.js = baseUrl para nao precisar repetir a URL do site que esta sendo usado para teste, usar somete o caminho a ser testo.
     beforeEach(() => {
-        cy.visit('/minha-conta/');
+        cy.visit('minha-conta');
     });
 
     it('must login successfully', () => {
@@ -45,7 +45,7 @@ describe("Feature login", () => {
 
     });
 
-
+    // teste realizado com comando customizado.
     it.only('must login with custom commands', () => {
         cy.Login('Teste400@teste.com.br', 'Senha12345*')
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, teste400 (não é teste400? Sair)')
