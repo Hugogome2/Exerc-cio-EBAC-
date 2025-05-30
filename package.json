@@ -4,7 +4,8 @@
   "description": "### 📘 Jornada de Aprendizagem",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy-dash": "npx cypress run --record --key b44c2a00-21d1-4495-82c5-048ec16ce080"
   },
   "repository": {
     "type": "git",
