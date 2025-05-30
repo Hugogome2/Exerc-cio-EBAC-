@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
+context('Exercício - Testes End-to-end - Fluxo de pedido', () => {
     /*  Como cliente 
         Quero acessar a Loja EBAC 
         Para fazer um pedido de 4 produtos 
@@ -13,7 +13,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.visit('/')
     });
 
-    it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
+    it('Deve fazer um pedido na loja EBAC Shop de ponta a ponta', () => {
         //TODO: Coloque todo o fluxo de teste aqui, considerando as boas práticas e otimizações
 
     });
