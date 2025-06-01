@@ -34,7 +34,7 @@ describe('seleção de produtos ', () => {
 */
 describe.only('Seleção de produtos com POM', () => {
     beforeEach(() => {
-        POM_produtos.visitarURL()
+        POM_produtos.visitarURLProduto()
     });
     //Busca produto pela posição = sucesso
     it('Deve selecionar um produto com sucesso', () => {

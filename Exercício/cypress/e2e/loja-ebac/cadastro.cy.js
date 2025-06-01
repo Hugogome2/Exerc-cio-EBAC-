@@ -18,7 +18,7 @@ describe('Feature: cadastro', () => {
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
     });
 
-    //cy.preCadastro = Comando personalizado na pasta support para evitar repetição de code 
+    //cy.preCadastro = Comando personalizado na pasta support para evitar repetição de código 
     it.only('must complete cadastre with success with custom command', () => {
         cy.preCadastro(faker.internet.email(), faker.internet.password(), faker.person.firstName(), faker.person.lastName())
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')

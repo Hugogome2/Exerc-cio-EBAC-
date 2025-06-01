@@ -13,8 +13,12 @@ Cypress.Commands.add('preCadastro', (email, senha, nome, sobrenome) => {
     cy.get('.woocommerce-Button').click()
 });
 Cypress.Commands.add('detalhesConta', (nome, sobrenome, nickname) => {
+    cy.get('#account_first_name').clear();
+    cy.get('#account_last_name').clear();
+    cy.get('#account_display_name').clear();
     cy.get('#account_first_name').type(nome)
     cy.get('#account_last_name').type(sobrenome)
     cy.get('#account_display_name').type(nickname)
     cy.get('.woocommerce-Button').click()
 });
+
