@@ -1,6 +1,10 @@
 /// <reference types="cypress" />
-import { fa, faker, fakerDA } from "@faker-js/faker";
+import { faker } from "@faker-js/faker";
 import POM from "../../support/Page-object/produtos-page";
+import InterceptPost from "../../support/Page-object/Intercept-post";
+import CheckOut from "../../support/Page-object/CheckOut"
+
+
 context('Exercício - Testes End-to-end - Fluxo de pedido', () => {
     /*  Como cliente 
         Quero acessar a Loja EBAC -> Feito 
@@ -26,7 +30,9 @@ context('Exercício - Testes End-to-end - Fluxo de pedido', () => {
         POM.confirmaProduto()
         cy.get('.checkout-button').click()
         POM.cleanAll()
-        POM.checkOut(faker.location.streetAddress(), faker.location.city())
+        CheckOut.checkOut(faker.location.street(), faker.location.city())
+        InterceptPost.intPost()
+        cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido');
     });
 
 

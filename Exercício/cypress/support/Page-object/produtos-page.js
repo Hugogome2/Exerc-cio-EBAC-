@@ -23,18 +23,15 @@ class POM_produtos {
     }
 
     addProduto(psc, tamanho, cor, quantidade) {
-        cy.get('.product-block').eq(psc).click()
-        cy.wait(7000)
-        cy.get('.button-variable-item-' + tamanho).click()
-        cy.wait(7000)
-        cy.get('.button-variable-item-' + cor).click()
-        cy.wait(5000)
+        cy.get('.product-block', { timeout: 10000 }).eq(psc).click()
+        cy.get('.button-variable-item-' + tamanho, { timeout: 10000 }).click()
+        cy.get('.button-variable-item-' + cor, { timeout: 10000 }).click()
         cy.get('.input-text').clear().type(quantidade)
         cy.get('.single_add_to_cart_button').click()
     }
     //Validar produto no carrinho 
     confirmaProduto() {
-        cy.get('.woocommerce-message > .button').click()
+        cy.get('.woocommerce-message > .button', { timeout: 7000 }).click()
     }
     //visitar aba de produtos
     visitarURLProduto() {
@@ -45,24 +42,18 @@ class POM_produtos {
         const { psc, tamanho, cor, quantidade } = produtos;
 
         cy.get('.product-block').eq(psc).click()
-        cy.wait(3000)
-        cy.get('.button-variable-item-' + tamanho).click()
-        cy.wait(3000)
-        cy.get('.button-variable-item-' + cor).click()
-        cy.wait(3000)
+        cy.get('.button-variable-item-' + tamanho, { timeout: 10000 }).click()
+        cy.get('.button-variable-item-' + cor, { timeout: 10000 }).click()
         cy.get('.input-text').clear().type(quantidade)
-        cy.get('.single_add_to_cart_button').click()
-        cy.wait(3000);
+        cy.get('.single_add_to_cart_button', { timeout: 10000 }).click()
         cy.visit('Produto');
     }
 
     addProduto_Busca(nomeProduto, tamanho, cor, quantidade) {
         cy.get('[name="s"]').eq(1).type(nomeProduto);
         cy.get('[type="submit"]').eq(1).click();
-        cy.get('.button-variable-item-' + tamanho).click()
-        cy.wait(7000)
-        cy.get('.button-variable-item-' + cor).click()
-        cy.wait(7000)
+        cy.get('.button-variable-item-' + tamanho, { timeout: 10000 }).click()
+        cy.get('.button-variable-item-' + cor, { timeout: 10000 }).click()
         cy.get('.input-text').clear().type(quantidade)
         cy.get('.single_add_to_cart_button').click()
     }
@@ -74,16 +65,7 @@ class POM_produtos {
         cy.get('#billing_phone').clear()
     }
 
-    checkOut(endereço, cidade) {
-        cy.get('#billing_address_1').type(endereço)
-        cy.get('#billing_city').type(cidade)
-        cy.get('#billing_postcode').type('39401-123')
-        cy.get('#billing_phone').type('(38)9999999999')
-        cy.get('#terms').click()
-        cy.get('#place_order').click()
-        cy.wait(2000)
-        cy.get('.page-title').should('contain', 'Pedido recebido')
-    }
+
 }
 
 export default new POM_produtos() //comando pra deixar arquivo acessível para ser importado no projeto.

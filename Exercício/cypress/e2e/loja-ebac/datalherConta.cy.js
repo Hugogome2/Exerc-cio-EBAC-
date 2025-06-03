@@ -13,6 +13,7 @@ describe('Feature: Completar dados da conta', () => {
     it('must change of account details', () => {
         cy.detalhesConta(faker.person.firstName(), faker.person.lastName(), 'TesteMaster')
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
+
     });
 });
 
